@@ -1,0 +1,10 @@
+{
+    "comandos": [
+        {
+            "nome": "Cronograma",
+            "descricao": "Informa o cronograma do grupo.",
+            "exemplo": "!Cronograma"
+        }
+    ]
+    
+}
