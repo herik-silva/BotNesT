@@ -4,6 +4,11 @@
             "nome": "Cronograma",
             "descricao": "Informa o cronograma do grupo.",
             "exemplo": "!Cronograma"
+        },
+        {
+            "nome": "Reunião",
+            "descricao": "Informa a data e horário das reuniões do grupo.",
+            "exemplo": "!Reuniao"
         }
     ]
     
