@@ -69,6 +69,12 @@ class PalavrasReservadas {
             await client.sendImageAsSticker(mensagem.from, imagemPreparada);
         }
     }
+
+    async REUNIAO(client: Client, mensagem: Message, parametros: Array<string>): Promise<void> {
+        const mensagemPreparada: string = "As reuniões com o orientador do grupo acontecem nas *Terças às 20:00* no link abaixo:\n https://meet.google.com/epn-dgzh-rsy?hs=224";
+
+        await client.sendText(mensagem.from, mensagemPreparada);
+    }
 }
 
 export default PalavrasReservadas;

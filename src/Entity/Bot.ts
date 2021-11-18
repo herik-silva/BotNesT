@@ -3,12 +3,10 @@ import { Client, Message } from "@open-wa/wa-automate"
 class Bot {
     private usuarios: Array<string>;
     public palavrasReservadas: PalavrasReservadas;
-    private contLucas: number;
 
     constructor(){
         this.usuarios = [];
         this.palavrasReservadas = new PalavrasReservadas();
-        this.contLucas = 0;
     }
 
     /**
