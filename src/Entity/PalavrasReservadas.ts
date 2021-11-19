@@ -31,8 +31,8 @@ class PalavrasReservadas {
     }
 
     async CRONOGRAMA(client: Client, mensagem: Message, parametros: Array<string>): Promise<void> {
-        await client.sendText(mensagem.from, "Buscando cronograma...")
-        const page = new Page("a2a7ea5ca00b456eba4da003c9853ae6","secret_oFFL6NrI3SWzefr1Nezebx5FSwaYWrQF2DkYZm1YvSl");
+        await client.sendText(mensagem.from, "Buscando cronograma...");
+        const page = new Page(process.env.BLOCK_ID,process.env.ACCESS_TOKEN);
         const toDoList = await page.consultData();
 
         const arrayMessage = ["*---CRONOGRAMA---*\n"];
@@ -71,7 +71,7 @@ class PalavrasReservadas {
     }
 
     async REUNIAO(client: Client, mensagem: Message, parametros: Array<string>): Promise<void> {
-        const mensagemPreparada: string = "As reuniões com o orientador do grupo acontecem nas *Terças às 20:00* no link abaixo:\n https://meet.google.com/epn-dgzh-rsy?hs=224";
+        const mensagemPreparada: string = `As reuniões com o orientador do grupo acontecem nas *Terças às 20:00* no link abaixo:\n ${process.env.MEET_LINK}`;
 
         await client.sendText(mensagem.from, mensagemPreparada);
     }
